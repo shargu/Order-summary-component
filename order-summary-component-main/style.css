@@ -1,0 +1,163 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  /* 3. Enable keyword animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+  
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 6. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 7. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 9. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    10. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+body{
+    background-color: hsl(225, 100%, 98%);
+    font-family: "Red Hat Display", sans-serif;
+    
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 340px;
+    border-radius: 16px;
+    background-color: white;
+    z-index: 1;
+    position: relative;
+}
+.bg{
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+}
+.card{
+    display: block;
+    flex-direction: row;
+}
+.hero{
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+   
+}
+h1, p{
+    text-align: center;
+    font-family: "Red Hat Display", sans-serif;
+}
+.title{
+    font-weight: 900;
+    margin: 30px 0 10px 0;
+}
+p{
+    padding: 0 10px  0  10px;
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+}
+.plan-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    margin: 15px 25px 15px 25px;
+    font-family: "Red Hat Display", sans-serif;
+     padding: 10px 10px 10px 10px;
+     border-radius: 7px;
+}
+a{
+    font-weight: 700;
+    padding-left: 40px;
+}
+.plan-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Red Hat Display", sans-serif;
+}
+.annual {
+    margin: 0;
+    font-weight: 900;
+    font-size: 16px;
+}
+.price{
+    margin: 0;
+}
+.icon{
+    margin-right:6px ;
+}
+.proceed {
+    display: block;
+    margin: 20px auto;
+    padding: 5px 80px 5px 80px;
+    font-family: "Red Hat Display", sans-serif;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cancel{
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 900;
+    display: block;
+    margin: 20px auto;
+    border: none;
+    background-color: transparent;
+    color: hsl(224, 23%, 55%);
+    cursor: pointer;
+}
+.proceed:hover{
+    background-color: hsl(245, 75%, 62%);
+}
+.cancel:hover{
+    color: hsl(224, 23%, 35%);
+}
+a:hover{
+    color: hsl(245, 75%, 52%);
+}
